@@ -10,13 +10,23 @@ module.exports = function createDreamTeam(members) {
     // );
     // let dream = members.reduce((accu, cur) => accu + cur.split("")[0]);
     let dream = members.map((elem) => {
-      elem = elem.replace(/\s/g, "");
-      // console.log(elem);
-      return (elem = elem.split("")[0]);
+      if (typeof elem === "string") {
+        elem = elem.replace(/\s/g, "");
+        // console.log(elem);
+        return (elem = elem.split("")[0]);
+      }
     });
     // console.log(sample);
     // console.log(dream);
-    return dream.sort().join("");
+    // items.sort(function (a, b) {
+    //   return a.localeCompare(b);
+    // });
+    return dream
+      .sort(function (a, b) {
+        return a.localeCompare(b);
+      })
+      .join("")
+      .toUpperCase();
   } else {
     // console.log(typeof members);
     return false;
