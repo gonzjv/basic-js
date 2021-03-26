@@ -22,9 +22,8 @@ module.exports = function getSeason(date) {
     // return null;
   }
   let month = date.getMonth();
-  // console.log(month);
+  console.log(date.getUTCDate());
   console.log(date);
-  console.log(Object.prototype.toString.call(date));
   return month <= 1
     ? "winter"
     : month <= 4
