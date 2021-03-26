@@ -23,7 +23,7 @@ module.exports = function getSeason(date) {
   }
   let month = date.getMonth();
   console.log(date.getUTCDate());
-  console.log(date);
+  // console.log(date);
   return month <= 1
     ? "winter"
     : month <= 4
