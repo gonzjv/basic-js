@@ -13,7 +13,7 @@ const chainMaker = {
     value === undefined
       ? this.arr.push("()")
       : this.arr.push("( " + value + " )");
-    console.log("add link" + this.arr);
+    // console.log("add link" + this.arr);
     return this;
     // throw new CustomError('Not implemented');
     // remove line with error and write your code here
@@ -33,7 +33,7 @@ const chainMaker = {
       //   console.error(err.name + ": " + err.message);
       // }
     } else {
-      console.log(position);
+      // console.log(position);
       this.arr.splice(position - 1, 1);
       return this;
     }
@@ -49,7 +49,7 @@ const chainMaker = {
   finishChain() {
     let chain = this.arr.join("~~");
     this.arr.splice(0, this.arr.length);
-    console.log(chain);
+    // console.log(chain);
     return chain;
     // throw new CustomError('Not implemented');
     // remove line with error and write your code here
